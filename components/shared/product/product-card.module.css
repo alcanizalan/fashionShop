@@ -1,0 +1,42 @@
+
+.productCard{
+    display: flex;
+    flex-direction: column;
+
+    & .imageContainer{
+        position: relative;
+        height: 75%;
+
+        & .imageFront{
+            position: absolute;
+        }
+    }
+    
+    .infoProducto{
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+
+        & .titleAndPrice{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        & .contenedorColores{
+        display: flex;
+        gap: 5px;
+        padding: 0 20px;
+
+            & .contenedorColor{
+                height: 10px;
+                width: 10px
+            }
+        }
+    }
+}
+
+.productCard:hover .imageFront{
+    opacity: 0;
+}

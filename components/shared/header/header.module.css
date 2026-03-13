@@ -1,0 +1,24 @@
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .7em;
+    padding: 12px 30px;
+    transition: filter .4s ease;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+
+    & .containerHeaderTools{
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.header:hover{
+    background-color: white;
+    filter: invert();
+}

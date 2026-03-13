@@ -1,0 +1,48 @@
+.lookContainer{
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .completeLook{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .imageLook{
+            height: 100%;
+        }
+    }
+
+    & .articlesLook{
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        & .productImage{
+            height: auto;
+            width: 200px;
+        }
+    }
+}
+
+.lookContainer:hover .articlesLook{
+    opacity: 1;
+    transition: opacity .2s ease, transform .2s ease;
+    transform: scale(1.05);
+}
+
+.lookContainer:hover .completeLook{
+    opacity: 0;
+    transition: opacity .2s ease, transform .2s ease;
+    transform: scale(0.95);
+}
+
+.productImage:hover{
+    transform: scale(1.05);
+    transition: transform .2s ease-in-out;
+}
