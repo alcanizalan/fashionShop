@@ -1,24 +1,59 @@
 
-
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: .7em;
-    padding: 12px 30px;
-    transition: filter .4s ease;
-    position: fixed;
+.headerAndNav{
     width: 100%;
     z-index: 10;
-
-
-    & .containerHeaderTools{
+    position: fixed;
+    
+    .containerHeader{
         display: flex;
-        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: .7em;
+        padding: 12px 30px;
+        transition: filter .4s ease;
+        width: 100%;
+
+        & .headerButtons{
+            display: flex;
+            gap: 20px;
+            cursor: pointer;
+        }
+
+        & .containerHeaderTools{
+            display: flex;
+            gap: 20px;
+        }
     }
+
+    .containerHeader:hover{
+        background-color: white;
+        filter: invert();
+    }
+
+    .containerNav{
+        display: flex;
+        font-size: .7em;
+        padding: 12px 30px;
+        background-color: white;
+
+        & .containerUl{
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+
+            & .containerLi{
+                cursor: pointer;
+            }
+        }
+    }
+
 }
 
-.header:hover{
+.blackBackground{
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100vh;
+}
+
+.headerAbiertoTop{
     background-color: white;
-    filter: invert();
 }

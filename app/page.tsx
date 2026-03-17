@@ -10,7 +10,7 @@ export default function Home() {
     <div>
       <Header/>
       <br/><br/><br/><br/>
-      <Link href="/shop/viewall">View All Products</Link>
+      <Link href="/shop/view-all">View All Products</Link>
     </div>
   );
 }

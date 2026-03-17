@@ -3,8 +3,8 @@ import Image from "next/image";
 
 import styles from "./look.module.css";
 
-import looks from "@/db/looks";
 import { LookModule } from "@/types/Products";
+import Link from "next/link";
 
 
 export default function Look({ id, name, imageLook, products }: LookModule) {
@@ -17,7 +17,9 @@ export default function Look({ id, name, imageLook, products }: LookModule) {
                 {
                     products.map((product, index) => {
                         return(
-                            <Image key={index} src={product.image} alt={product.name} className={styles.productImage}/>
+                            <Link key={index} href={`/product/${product.slug}`} className={styles.link}>
+                                <Image src={product.image} alt={product.name} className={styles.productImage}/>
+                            </Link>
                         )
                     })
                 }
