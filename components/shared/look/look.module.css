@@ -23,9 +23,17 @@
         align-items: center;
         flex-direction: column;
 
-        & .productImage{
-            height: auto;
-            width: 200px;
+        & .imageProductContainer{
+            overflow: hidden;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .productImage{
+                height: auto;
+                width: 200px;
+            }
         }
     }
 }

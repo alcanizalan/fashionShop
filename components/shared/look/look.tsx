@@ -18,7 +18,9 @@ export default function Look({ id, name, imageLook, products }: LookModule) {
                     products.map((product, index) => {
                         return(
                             <Link key={index} href={`/product/${product.slug}`} className={styles.link}>
-                                <Image src={product.image} alt={product.name} className={styles.productImage}/>
+                                <div className={styles.imageProductContainer}>
+                                     <Image src={product.image} alt={product.name} className={styles.productImage}/>
+                                </div>
                             </Link>
                         )
                     })

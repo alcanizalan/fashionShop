@@ -9,8 +9,6 @@ export default function Home() {
   return (
     <div>
       <Header/>
-      <br/><br/><br/><br/>
-      <Link href="/shop/view-all">View All Products</Link>
     </div>
   );
 }

@@ -31,6 +31,24 @@ const products: Product[] = [
                 selected: true,
             },
         ],
+        sizes: [
+            {
+                name: "S",
+                quantity: 10,
+            },
+            {
+                name: "M",
+                quantity: 0,
+            },
+            {
+                name: "L",
+                quantity: 5,
+            },
+            {
+                name: "XL",
+                quantity: 2,
+            }
+        ],
     },{
         id: 2,
         name: "Sweater 2",
@@ -55,6 +73,24 @@ const products: Product[] = [
                 selected: false,
             },
         ],
+        sizes: [
+            {
+                name: "S",
+                quantity: 10,
+            },
+            {
+                name: "M",
+                quantity: 0,
+            },
+            {
+                name: "L",
+                quantity: 5,
+            },
+            {
+                name: "XL",
+                quantity: 2,
+            }
+        ]
     },
 ]
 

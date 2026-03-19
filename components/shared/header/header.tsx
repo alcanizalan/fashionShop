@@ -32,11 +32,11 @@ export default function Header() {
                             <li className={styles.containerLi}>LAST UNITS</li>
                             <li className={styles.containerLi}>CONSTELLATION VIEW</li>
                             <li className={styles.containerLi}>GIFT CARD</li>
-                            <li className={styles.containerLi}>LOOKS</li>
+                            <Link href="/shop/view-all"><li className={styles.containerLi}>LOOKS</li></Link>
                             <li className={styles.containerLi}>OUT & ABOUT</li>
                         </ul>
                     </nav>
-                    <div className={styles.blackBackground}>
+                    <div onClick={() => setIsOpen(false)} className={styles.blackBackground}>
                     </div>
                 </div>
                 )}   

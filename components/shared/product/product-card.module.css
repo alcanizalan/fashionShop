@@ -2,10 +2,15 @@
 .productCard{
     display: flex;
     flex-direction: column;
+    padding-top: 50px;
 
     & .imageContainer{
         position: relative;
-        height: 75%;
+        max-height: 300px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         & .imageFront{
             position: absolute;
@@ -24,6 +29,12 @@
             padding: 0 20px;
         }
 
+        & .sizesContainer{
+            display: flex;
+            gap: 5px;
+            display: none;
+        }
+
         & .contenedorColores{
         display: flex;
         gap: 5px;
@@ -39,4 +50,12 @@
 
 .productCard:hover .imageFront{
     opacity: 0;
+}
+
+.productCard:hover .sizesContainer{
+    display: flex;
+}
+
+.productCard:hover .articleName{
+    display: none;
 }

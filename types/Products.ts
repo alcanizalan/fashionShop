@@ -8,12 +8,18 @@ export interface Product {
     image: StaticImageData;
     imageBack: StaticImageData;
     colors: Color[];
+    sizes: Size[];
 }
 
 interface Color {
     name: string;
     hex: string;
     selected?: boolean;
+}
+
+interface Size{
+    name: string;
+    quantity: number;
 }
 
 export interface LookModule {
