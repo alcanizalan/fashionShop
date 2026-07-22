@@ -1,0 +1,81 @@
+# ==========================================
+# Dependencies
+# ==========================================
+/node_modules
+/.pnpm-store
+
+# ==========================================
+# Next.js Build & Output
+# ==========================================
+/.next/
+/out/
+/build
+/dist
+
+# ==========================================
+# Production & Static Assets
+# ==========================================
+# Solo ignora los assets estáticos generados en build, no la carpeta /public original
+/public/build
+
+# ==========================================
+# Environment Variables & Local Secrets
+# ==========================================
+# Archivos de variables de entorno locales (NUNCA subas credenciales a Git)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Si usas Supabase local o configs locales
+.env*.local
+
+# ==========================================
+# Logs & Debugging
+# ==========================================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ==========================================
+# Testing & Coverage
+# ==========================================
+/coverage
+/.nyc_output
+/.playwright
+/test-results
+
+# ==========================================
+# Vercel & Deployment
+# ==========================================
+/.vercel
+
+# ==========================================
+# IDE & System Files
+# ==========================================
+# macOS
+.DS_Store
+*.pem
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code / JetBrains (opcional: ignora configuraciones locales del editor)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+.idea/
+
+# ==========================================
+# TypeScript & Cache
+# ==========================================
+*.tsbuildinfo
+next-env.d.ts.bak
+/.cache

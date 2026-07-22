@@ -5,8 +5,8 @@ export interface Product {
     name: string;
     slug: string;
     price: number;
-    image: StaticImageData;
-    imageBack: StaticImageData;
+    image: string | StaticImageData;
+    imageBack: string | StaticImageData;
     colors: Color[];
     sizes: Size[];
 }

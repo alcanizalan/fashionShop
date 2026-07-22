@@ -1,9 +1,3 @@
-
-import Sweater from "@/public/KNITSCORREGIDO-01.webp"
-import Sweater2 from "@/public/KNITSCORREGIDO-02.webp"
-import Sweater9 from "@/public/KNITSCORREGIDO-09.webp"
-import Sweater10 from "@/public/KNITSCORREGIDO-10.webp"
-
 import { Product } from "@/types/Products";
 
 const products: Product[] = [
@@ -12,8 +6,8 @@ const products: Product[] = [
         name: "Sweater",
         slug: "wool-sweater",
         price: 199.99,
-        image: Sweater,
-        imageBack: Sweater2,
+        image: "/KNITSCORREGIDO-01.webp",
+        imageBack: "/KNITSCORREGIDO-02.webp",
         colors: [
             {
                 name: "Red",
@@ -54,8 +48,8 @@ const products: Product[] = [
         name: "Sweater 2",
         slug: "wool-sweater-2",
         price: 139.99,
-        image: Sweater10,
-        imageBack: Sweater9,
+        image: "/KNITSCORREGIDO-10.webp",
+        imageBack: "/KNITSCORREGIDO-09.webp",
         colors: [
             {
                 name: "Red",
