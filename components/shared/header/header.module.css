@@ -4,6 +4,7 @@
     z-index: 10;
     position: fixed;
     color: black;
+    padding: 10px;
     
     .containerHeader{
         display: flex;
@@ -13,6 +14,10 @@
         padding: 12px 30px;
         transition: filter .4s ease;
         width: 100%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        border-bottom: 3px solid rgba(235, 235, 235, 0.904);
+        
 
         & .headerButtons{
             display: flex;
@@ -24,11 +29,6 @@
             display: flex;
             gap: 20px;
         }
-    }
-
-    .containerHeader:hover{
-        background-color: white;
-        filter: invert();
     }
 
     .containerNav{

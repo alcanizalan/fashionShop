@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import styles from "./look.module.css";
 
-import { LookModule } from "@/types/Products";
+import { LookModule } from "@/types/ProductType";
 import Link from "next/link";
 
 
@@ -19,7 +19,7 @@ export default function Look({ id, name, imageLook, products }: LookModule) {
                         return(
                             <Link key={index} href={`/product/${product.slug}`} className={styles.link}>
                                 <div className={styles.imageProductContainer}>
-                                     <Image src={product.image} alt={product.name} className={styles.productImage}/>
+                                     <Image src={product.image} alt={product.name} fill className={styles.productImage}/>
                                 </div>
                             </Link>
                         )

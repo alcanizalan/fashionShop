@@ -1,6 +1,6 @@
 import products from "./sample-data";
 
-import {LookModule} from "@/types/Products";
+import {LookModule} from "@/types/ProductType";
 import Look1 from "@/public/P_DSC0472.webp";
 
 const looks: LookModule[] = [

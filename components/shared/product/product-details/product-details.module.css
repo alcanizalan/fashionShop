@@ -1,0 +1,39 @@
+.productDetailsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    color: black;
+
+    & .productNameDescription{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        align-items: end;
+        padding: 50px;
+        justify-content: center;
+    }
+
+    & .productOptionsAndInfo{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+
+        & .addToCartButton{
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: .8em;
+        }
+
+        & button{
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            cursor: pointer;
+        }
+    }
+}

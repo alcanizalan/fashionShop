@@ -1,0 +1,10 @@
+.contenedorColores{
+    display: flex;
+    gap: 5px;
+    padding: 0 20px;
+
+    & .contenedorColor{
+        height: 10px;
+        width: 10px
+    }
+}

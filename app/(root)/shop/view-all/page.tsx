@@ -1,31 +1,22 @@
-import ProductCard from "@/components/shared/product/product-card"
+import { Suspense } from "react"
 
-import products from "@/db/sample-data"
-import looks from "@/db/looks"
+import ProductCard from "@/components/shared/product/product-card/product-card"
+
+//import products from "@/db/sample-data"
+//import looks from "@/db/looks"
 
 import Header from "@/components/shared/header/header"
+import ProductList from "@/components/shared/product/product-list/product-list"
 
 import styles from "./page.module.css"
-import Look from "@/components/shared/look/look"
 
 export default function ViewAll(){
     return(
-        <div>
+        <div className={styles.shopContainer}>
             <Header />
-            <main className={styles.containerShop}>
-                {products.map((product, index) => (
-                    <ProductCard key={index} {...product} />
-                ))}
-            </main>
-            <div className={styles.looksContainer}>
-                {
-                    looks.map((look, index) => {
-                        return(
-                            <Look key={index} {...look} />
-                        )
-                    })
-                }
-            </div>
+            <Suspense fallback={<div>Cargando productos...</div>}>
+                <ProductList />
+            </Suspense>
         </div>
     )
 }

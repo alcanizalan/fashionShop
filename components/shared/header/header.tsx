@@ -27,8 +27,8 @@ export default function Header() {
                         <ul className={styles.containerUl}>
                             <li className={styles.containerLi}>BEST SELLERS</li>
                             <li className={styles.containerLi}>NEW IN</li>
-                            <li className={styles.containerLi}>COLLECTIONS</li>
-                            <li className={styles.containerLi}>SHOP ALL</li>
+                            <li className={styles.containerLi}>VIEW COLLECTIONS</li>
+                            <li className={styles.containerLi}>VIEW ALL</li>
                             <li className={styles.containerLi}>LAST UNITS</li>
                             <li className={styles.containerLi}>CONSTELLATION VIEW</li>
                             <li className={styles.containerLi}>GIFT CARD</li>

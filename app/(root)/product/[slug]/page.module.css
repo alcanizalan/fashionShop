@@ -1,36 +1,5 @@
 .containerArticleShop{
-    display: grid;
-    grid-template-columns: 1fr 1.2fr 1fr;
     align-items: center;
 
-    & .productNameDescription{
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        align-items: end;
-        padding: 50px;
-    }
-
-    & .productOptionsAndInfo{
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        align-items: start;
-
-        & .addToCartButton{
-            background-color: black;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: .8em;
-        }
-
-        & button{
-            display: flex;
-            flex-direction: column;
-            text-align: start;
-            cursor: pointer;
-        }
-    }
+    
 }
