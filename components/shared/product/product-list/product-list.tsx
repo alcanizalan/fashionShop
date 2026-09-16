@@ -2,12 +2,12 @@ import { createClient } from "@/lib/supabase/server";
 import ProductCard from "@/components/shared/product/product-card/product-card";
 import { GroupProduct } from '@/types/ProductType';
 import styles from "./product-list.module.css";
-import { useGetAllProducts } from "@/hooks/useGetProduct";
+import { getAllProducts } from "@/utils/getProduct";
 
 
 export default async function ProductList(){
     
-    const { product } = await useGetAllProducts();
+    const { product } = await getAllProducts();
 
     console.log("Fetched products:", product);
 

@@ -1,6 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 
-export async function useGetGroupProduct(slug: string) {
+export async function getGroupProduct(slug: string) {
     const supabase = await createClient();
     
         const { data, error } = await supabase
@@ -22,7 +22,7 @@ export async function useGetGroupProduct(slug: string) {
     return { data, error };
 }
 
-export async function useGetAllGroupProducts() {
+export async function getAllGroupProducts() {
     const supabase = await createClient();
 
     const { data, error } = await supabase
@@ -48,7 +48,7 @@ export async function useGetAllGroupProducts() {
     return { data, error };
 }
 
-export async function useGetProduct(slug: string) {
+export async function getProduct(slug: string) {
   const supabase = await createClient();
 
   const { data: product, error } = await supabase
@@ -85,7 +85,7 @@ export async function useGetProduct(slug: string) {
   return { product, error };
 }
 
-export async function useGetAllProducts() {
+export async function getAllProducts() {
   const supabase = await createClient();
 
   
@@ -120,3 +120,4 @@ export async function useGetAllProducts() {
 
   return { product, error };
 }
+

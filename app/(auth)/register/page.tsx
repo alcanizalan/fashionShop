@@ -1,11 +1,11 @@
 
 import { register } from '@/services/auth'
 
-export default function RegisterPage() {
+export default async function RegisterPage() {
     return(
         <div>
             <h1>Register Page</h1>
-            <form>
+            <form action={register}>
                 <div>
                     <label htmlFor="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="tu nombre" required/>
@@ -22,7 +22,7 @@ export default function RegisterPage() {
                     <label htmlFor="repeat-password">Repeat the password</label>
                     <input type="password" id="repeat-password" name="repeat-password" placeholder="repite tu contraseña" required/>
                 </div>
-                    <button formAction={register} type="submit">Register</button>
+                    <button type="submit">Register</button>
             </form>
         </div>
     )
