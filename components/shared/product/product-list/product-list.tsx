@@ -2,7 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import ProductCard from "@/components/shared/product/product-card/product-card";
 import { GroupProduct } from '@/types/ProductType';
 import styles from "./product-list.module.css";
-import { getAllProducts } from "@/utils/getProduct";
+import { getAllProducts } from "@/services/product.service";
 
 
 export default async function ProductList(){

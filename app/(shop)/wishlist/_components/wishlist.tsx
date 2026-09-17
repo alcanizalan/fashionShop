@@ -1,4 +1,4 @@
-import { getWishlist } from "@/utils/wishlist-operations";
+import { getWishlist } from "@/services/wishlist.service";
 
 export default async function Wishlist(){
     const { data: wishlist, error } = await getWishlist();

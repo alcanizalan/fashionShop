@@ -1,6 +1,6 @@
 
 import { Suspense } from "react";
-import Wishlist from "@/components/shared/wishlist/wishlist";
+import Wishlist from "@/app/(shop)/wishlist/_components/wishlist";
 
 export default function WishlistPage(){
 
