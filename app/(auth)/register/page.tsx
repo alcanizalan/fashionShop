@@ -1,5 +1,5 @@
 
-import { register } from '@/services/auth'
+import { register } from '@/services/authService'
 
 export default async function RegisterPage() {
     return(

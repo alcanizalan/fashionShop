@@ -4,7 +4,6 @@
     z-index: 10;
     position: fixed;
     color: black;
-    padding: 10px;
     
     .containerHeader{
         display: flex;
@@ -14,8 +13,7 @@
         padding: 12px 30px;
         transition: filter .4s ease;
         width: 100%;
-        background-color: rgb(255, 255, 255);
-        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.669);
         border-bottom: 3px solid rgba(235, 235, 235, 0.904);
         
 

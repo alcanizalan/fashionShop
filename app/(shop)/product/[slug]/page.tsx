@@ -4,7 +4,7 @@ import Header from "@/components/shared/header/header";
 
 import styles from "./page.module.css"
 
-import { getProduct } from "@/services/product.service";
+import { getProduct } from "@/services/productService";
 import ProductDetails from "@/components/shared/product/product-details/product-details";
 
 export default function ProductPage({ params }: { params: Promise<{ slug: string}>}){

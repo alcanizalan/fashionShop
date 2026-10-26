@@ -1,11 +1,11 @@
 "use client"
 import styles from "./header.module.css"
 import UserToggleLogin from "@/components/shared/user/user-toggle-login/user-toggle-login"
+import Link from "next/link"
 
 import Image from "next/image"
 
 import Logo from "../../../public/Vector_160d78ea-60e2-4e7e-89e5-6b9f32835361.svg"
-import Link from "next/link"
 import { useState } from "react"
 
 
@@ -20,7 +20,8 @@ export default function Header() {
                 <div className={styles.containerHeaderTools}>
                     <button className={styles.headerButtons}>SEARCH</button>
                     <UserToggleLogin />
-                    <button className={styles.headerButtons}>CART</button>
+                    <Link href="/wishlist" className={styles.headerButtons}>WISHLIST</Link>
+                    <Link href="/cart" className={styles.headerButtons}>CART</Link>
                 </div>
             </header>
             { isOpen && (

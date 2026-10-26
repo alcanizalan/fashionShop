@@ -36,18 +36,19 @@ export function getProductOptions(product: Product){
 
 export function getProductSizes(activeProduct: Product){
 
-    const sizes = new Map<number, {size: string, hasStock: boolean}>();
+    const sizes = new Map<number, {sizeId: number, size: string, hasStock: boolean}>();
 
     (activeProduct.product_variant || []).forEach((v) => {
         if (!v.size) return;
 
+        const sizeId = v.size.id;
         const isAvailable = v.stock > 0;
-        const existing = sizes.get(v.size.id);
+        const existing = sizes.get(sizeId);
 
         if (!existing){
-            sizes.set(v.size.id, {size: v.size.name, hasStock: isAvailable});
+            sizes.set(v.size.id, {sizeId: v.size.id, size: v.size.name, hasStock: isAvailable});
         }else if (isAvailable) {
-            sizes.set(v.size.id, {size: v.size.name, hasStock: true});
+            sizes.set(v.size.id, {sizeId: v.size.id, size: v.size.name, hasStock: true});
         }
     });
 

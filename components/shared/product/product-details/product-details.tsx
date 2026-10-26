@@ -1,13 +1,20 @@
 import Image, { StaticImageData } from "next/image";
+
 import { Product } from "@/types/ProductType";
-import {getProductOptions, getProductSizes} from "@/utils/product-helpers";
-import ColorSelector from "@/components/shared/product/product-color-selector/product-color-selector";
 import styles from "./product-details.module.css";
 
+import {getProductOptions} from "@/utils/product-helpers";
+
+import ColorSelector from "@/components/shared/product/product-color-selector/product-color-selector";
 import ButtonFav from "@/components/ui/button-fav/button-fav";
 
+import { isProductInWishlist } from "@/services/wishlistService";
+import { addItemToCart } from "@/services/cartService";
+import ButtonAddToCart from "@/components/ui/button-add-to-cart/button-add-to-cart";
 
-export default function ProductDetails({ product }: { product: Product }) {
+
+
+export default async function ProductDetails({ product}: { product: Product }) {
     const {colors, sizes: initialSizes} = getProductOptions(product);
 
     const imageProduct: Array<string | StaticImageData> = product?.image_product?.map(img => img.image_url) || [];
@@ -15,6 +22,8 @@ export default function ProductDetails({ product }: { product: Product }) {
     const imageUrl = imageProduct.length > 0 ? imageProduct[0] : null;
 
     const price = product?.product_variant?.[0]?.price;
+
+    const isInWishlist = await isProductInWishlist(product.id);
 
     return (
         <section className={styles.productDetailsContainer}>
@@ -31,7 +40,7 @@ export default function ProductDetails({ product }: { product: Product }) {
                 )}
             </div>
             <div className={styles.productOptionsAndInfo}>
-                <ButtonFav productId={product.id} />
+                <ButtonFav productId={product.id} initialIsInWishlist={isInWishlist} />
                 <span>{price}€</span>
                 <div className={styles.contenedorColores}>
                     <ColorSelector product={product} colors={colors} selectedColor={product.color?.id ?? colors[0]?.id} />
@@ -41,7 +50,8 @@ export default function ProductDetails({ product }: { product: Product }) {
                     <span>Compare delivery methods </span>
                 </p>
                 <span>Delivered to 90100, Finland.</span>
-                <button className={styles.addToCartButton}>ADD TO CART</button>
+                
+                <ButtonAddToCart initialProduct={product} />
                 <div className={styles.buttonsExtraInfo}>
                     <button>SHIPPING AND RETURNS</button>
                     <button>VIEW LOOKS</button>
